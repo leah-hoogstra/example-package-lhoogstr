@@ -6,10 +6,14 @@ build-backend = "hatchling.build"
 
 [project] 
 name = "example_package_lhoogstr" 
-version = "0.1.0" 
+dynamic = ["version"]
 dependencies = ["numpy"]
 readme="README.md"
 
 # optional dependencies are dependencies that only developers of this project need. 
 [project.optional-dependencies]
 test = ["pytest"]
+
+# allows for the version number to be read from init so it stays in sync
+[tool.hatch]
+version.path = "src/example_package_lhoogstr/__init__.py"
