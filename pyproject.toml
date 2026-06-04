@@ -1,0 +1,15 @@
+# contents of a minimal pyproject.toml 
+
+[build-system] 
+requires = ["hatchling"] 
+build-backend = "hatchling.build" 
+
+[project] 
+name = "example_package_lhoogstr" 
+version = "0.1.0" 
+dependencies = ["numpy"]
+readme="README.md"
+
+# optional dependencies are dependencies that only developers of this project need. 
+[project.optional-dependencies]
+test = ["pytest"]
